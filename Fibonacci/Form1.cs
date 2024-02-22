@@ -5,13 +5,19 @@ namespace Fibonacci
         public Form1()
         {
             InitializeComponent();
+            List<Elem> elemek = new List<Elem>();
             for (int i = 0; i < 10; i++)
             {
                 Button b = new Button();
                 b.Top = i*30;
                 b.Text = Fibonacci(i).ToString();
                 Controls.Add(b);
+                Elem ujelem = new Elem();
+                ujelem.Sorszam = i;
+                ujelem.Ertek = Fibonacci(i);
+                elemek.Add(ujelem);
             }
+            dataGridView1.DataSource = elemek;
         }
 
         int Fibonacci(int n)

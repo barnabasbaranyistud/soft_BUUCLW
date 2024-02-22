@@ -8,7 +8,7 @@ namespace Fibonacci
 {
     internal class Elem
     {
-        int Sorszam;
-        long Ertek;
+        public int Sorszam { get; set; }
+        public long Ertek { get; set; }
     }
 }
