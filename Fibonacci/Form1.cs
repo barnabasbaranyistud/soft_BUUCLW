@@ -6,7 +6,7 @@ namespace Fibonacci
         {
             InitializeComponent();
             List<Elem> elemek = new List<Elem>();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 20; i++)
             {
                 Button b = new Button();
                 b.Top = i*30;
