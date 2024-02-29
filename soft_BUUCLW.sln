@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eloadas3", "Eloadas3\Eloada
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gyakorlo1", "gyakorlo1\gyakorlo1.csproj", "{7C3B96A9-9333-4CAF-9B8E-42F0B59D02E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gyakorlo4", "Gyakorlo4\Gyakorlo4.csproj", "{5950AAAB-8730-4266-A7E9-90C42755CF05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{7C3B96A9-9333-4CAF-9B8E-42F0B59D02E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C3B96A9-9333-4CAF-9B8E-42F0B59D02E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C3B96A9-9333-4CAF-9B8E-42F0B59D02E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5950AAAB-8730-4266-A7E9-90C42755CF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5950AAAB-8730-4266-A7E9-90C42755CF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5950AAAB-8730-4266-A7E9-90C42755CF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5950AAAB-8730-4266-A7E9-90C42755CF05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
