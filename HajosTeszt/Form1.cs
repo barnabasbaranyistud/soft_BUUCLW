@@ -77,5 +77,6 @@ namespace HajosTeszt
             actual++;
             if (actual == 7) actual = 0;
         }
+
     }
 }
