@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HajosTeszt
 {
-    internal class Kerdes
+    internal class Kérdés
     {
         public string KérdésSzöveg { get; set; }
         public string Válasz1 { get; set; }
