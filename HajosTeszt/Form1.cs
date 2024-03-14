@@ -2,6 +2,9 @@ namespace HajosTeszt
 {
     public partial class Form1 : Form
     {
+        List<Kérdés> ÖsszesKérdés;
+        List<Kérdés> AktívKérdések;
+        int actual = 1;
         public Form1()
         {
             InitializeComponent();
@@ -9,7 +12,7 @@ namespace HajosTeszt
         List<Kérdés> KérdésBeolvasás()
         {
             List<Kérdés> kérdések = new List<Kérdés>();
-            StreamReader sr = new StreamReader("hajozasi_szabalyzat_kerdessor_BOM.txt", true);
+            StreamReader sr = new StreamReader("text.txt", true);
 
             while (!sr.EndOfStream)
             {
@@ -38,9 +41,6 @@ namespace HajosTeszt
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            List<Kérdés> ÖsszesKérdés;
-            List<Kérdés> AktívKérdések;
-
             AktívKérdések = new List<Kérdés>();
             ÖsszesKérdés = KérdésBeolvasás();
 
@@ -51,6 +51,31 @@ namespace HajosTeszt
             }
 
             dataGridView1.DataSource = AktívKérdések;
+            KérdésMegjelenítés(AktívKérdések[actual]);
+        }
+
+        void KérdésMegjelenítés(Kérdés kérdés)
+        {
+            label1.Text = kérdés.KérdésSzöveg;
+            válaszGomb1.Text = kérdés.Válasz1;
+            válaszGomb2.Text = kérdés.Válasz2;
+            válaszGomb3.Text = kérdés.Válasz3;
+            if (!string.IsNullOrEmpty(kérdés.URL))
+            {
+                pictureBox1.Load("https://storage.altinum.hu/hajo/" + kérdés.URL);
+                pictureBox1.Visible = true;
+            }
+            else
+            {
+                pictureBox1.Visible = false;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            KérdésMegjelenítés(AktívKérdések[actual]);
+            actual++;
+            if (actual == 7) actual = 0;
         }
     }
 }
