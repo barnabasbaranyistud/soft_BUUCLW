@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gyakorlo1", "gyakorlo1\gyak
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gyakorlo4", "Gyakorlo4\Gyakorlo4.csproj", "{5950AAAB-8730-4266-A7E9-90C42755CF05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HajosTeszt", "HajosTeszt\HajosTeszt.csproj", "{3B0F264D-DEFF-4B62-9946-AFDC1D4626ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HajosTeszt", "HajosTeszt\HajosTeszt.csproj", "{3B0F264D-DEFF-4B62-9946-AFDC1D4626ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kigyos", "kigyos\kigyos.csproj", "{2C433851-B197-4DD3-BB65-4C9EBA7F7E4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{3B0F264D-DEFF-4B62-9946-AFDC1D4626ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B0F264D-DEFF-4B62-9946-AFDC1D4626ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B0F264D-DEFF-4B62-9946-AFDC1D4626ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C433851-B197-4DD3-BB65-4C9EBA7F7E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C433851-B197-4DD3-BB65-4C9EBA7F7E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C433851-B197-4DD3-BB65-4C9EBA7F7E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C433851-B197-4DD3-BB65-4C9EBA7F7E4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
