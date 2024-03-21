@@ -2,12 +2,15 @@ namespace kigyos
 {
     public partial class Form1 : Form
     {
+        Random rnd = new Random();
+
         int fejX = 100;
         int fejY = 100;
         int irány_x = 1;
         int irány_y = 0;
         int lépésszám;
         int hossz = 5;
+        int almaszám;
 
         List<KígyóElem> kígyó = new();
 
@@ -18,11 +21,11 @@ namespace kigyos
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lépésszám++;
+        lépésszám++;
             fejX += irány_x * KígyóElem.Méret;
             fejY += irány_y * KígyóElem.Méret;
 
-            foreach (KígyóElem item in Controls)
+            foreach (PictureBox item in Controls)
             {
                 if (item is KígyóElem)
                 {
@@ -34,7 +37,7 @@ namespace kigyos
                     }
                 }
             }
-            
+
             KígyóElem ke = new();
             ke.Top = fejY;
             ke.Left = fejX;
@@ -48,6 +51,26 @@ namespace kigyos
                 KígyóElem levágandó = kígyó[0];
                 kígyó.RemoveAt(0);
                 Controls.Remove(levágandó);
+            }
+            Alma a = new();
+
+            if (a.Top == ke.Top && a.Left == ke.Left)
+            {
+                hossz += 1;
+                Controls.Remove(a);
+                almaszám = 0;
+            }
+
+            if (almaszám == 0)
+            {
+                do
+                {
+                    a.Top = (int)rnd.Next(ClientRectangle.Height / 20) * 20;
+                    a.Left = (int)rnd.Next(ClientRectangle.Width / 20) * 20;
+                }
+                while (a.Top != ke.Top && a.Left != ke.Left);
+                Controls.Add(a);
+                almaszám = 1;
             }
         }
 
