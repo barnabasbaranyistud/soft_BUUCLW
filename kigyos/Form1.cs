@@ -7,6 +7,9 @@ namespace kigyos
         int irány_x = 1;
         int irány_y = 0;
         int lépésszám;
+        int hossz = 5;
+
+        List<KígyóElem> kígyó = new();
 
         public Form1()
         {
@@ -18,10 +21,29 @@ namespace kigyos
             lépésszám++;
             fejX += irány_x * KígyóElem.Méret;
             fejY += irány_y * KígyóElem.Méret;
+
+            foreach (KígyóElem item in Controls)
+            {
+                if (item.Top == fejY && item.Left == fejX)
+                {
+                    Application.Exit();
+                }
+            }
+            
             KígyóElem ke = new();
             ke.Top = fejY;
             ke.Left = fejX;
+            kígyó.Add(ke);
             Controls.Add(ke);
+
+            if (lépésszám % 2 == 0) { ke.BackColor = Color.Yellow; }
+
+            if (kígyó.Count > hossz)
+            {
+                KígyóElem levágandó = kígyó[0];
+                kígyó.RemoveAt(0);
+                Controls.Remove(levágandó);
+            }
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
