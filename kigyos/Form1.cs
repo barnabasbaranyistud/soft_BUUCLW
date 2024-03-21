@@ -12,7 +12,13 @@ namespace kigyos
         int hossz = 5;
         int almaszám;
 
+        int almaX;
+        int almaY;
+
+        Alma a = new();
+
         List<KígyóElem> kígyó = new();
+        List<Alma> alma = new();
 
         public Form1()
         {
@@ -52,9 +58,9 @@ namespace kigyos
                 kígyó.RemoveAt(0);
                 Controls.Remove(levágandó);
             }
-            Alma a = new();
+           
 
-            if (a.Top == ke.Top && a.Left == ke.Left)
+            if (almaY == fejY && almaX == fejX)
             {
                 hossz += 1;
                 Controls.Remove(a);
@@ -63,16 +69,27 @@ namespace kigyos
 
             if (almaszám == 0)
             {
-                do
+                almaY = (int)rnd.Next(ClientRectangle.Height / 20) * 20;
+                almaX = (int)rnd.Next(ClientRectangle.Width / 20) * 20;
+                foreach (PictureBox item in Controls)
                 {
-                    a.Top = (int)rnd.Next(ClientRectangle.Height / 20) * 20;
-                    a.Left = (int)rnd.Next(ClientRectangle.Width / 20) * 20;
+                    if (item is KígyóElem)
+                    {
+                        KígyóElem k = (KígyóElem)item;
+                        if (k.Top == almaY && k.Left == almaX)
+                        {
+                            almaY = (int)rnd.Next(ClientRectangle.Height / 20) * 20;
+                            almaX = (int)rnd.Next(ClientRectangle.Width / 20) * 20;
+                            return;
+                        }
+                    }
                 }
-                while (a.Top != ke.Top && a.Left != ke.Left);
+            }
+                a.Top = almaY;
+                a.Left = almaX;
                 Controls.Add(a);
                 almaszám = 1;
             }
-        }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
