@@ -24,9 +24,14 @@ namespace kigyos
 
             foreach (KígyóElem item in Controls)
             {
-                if (item.Top == fejY && item.Left == fejX)
+                if (item is KígyóElem)
                 {
-                    Application.Exit();
+                    KígyóElem k = (KígyóElem)item;
+                    if (k.Top == fejY && k.Left == fejX)
+                    {
+                        timer1.Enabled = false;
+                        return;
+                    }
                 }
             }
             
