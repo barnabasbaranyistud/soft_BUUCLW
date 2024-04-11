@@ -33,10 +33,10 @@
             button2 = new Button();
             button3 = new Button();
             dataGridView1 = new DataGridView();
-            countryDataBindingSource = new BindingSource(components);
             nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             populationDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             areaInSquareKmDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            countryDataBindingSource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)countryDataBindingSource).BeginInit();
             SuspendLayout();
@@ -59,6 +59,7 @@
             button2.TabIndex = 1;
             button2.Text = "Törlés";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -68,6 +69,7 @@
             button3.TabIndex = 2;
             button3.Text = "Szerkesztés";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // dataGridView1
             // 
@@ -80,10 +82,6 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(715, 267);
             dataGridView1.TabIndex = 3;
-            // 
-            // countryDataBindingSource
-            // 
-            countryDataBindingSource.DataSource = typeof(CountryData);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -102,6 +100,10 @@
             areaInSquareKmDataGridViewTextBoxColumn.DataPropertyName = "AreaInSquareKm";
             areaInSquareKmDataGridViewTextBoxColumn.HeaderText = "AreaInSquareKm";
             areaInSquareKmDataGridViewTextBoxColumn.Name = "areaInSquareKmDataGridViewTextBoxColumn";
+            // 
+            // countryDataBindingSource
+            // 
+            countryDataBindingSource.DataSource = typeof(CountryData);
             // 
             // Form1
             // 

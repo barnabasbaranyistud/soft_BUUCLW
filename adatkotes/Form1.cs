@@ -24,5 +24,17 @@ namespace adatkotes
                 countryList.Add(item);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            countryDataBindingSource.RemoveCurrent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormCountryData fcd = new FormCountryData();
+            fcd.CountryData = countryDataBindingSource.Current as CountryData;
+            fcd.ShowDialog();
+        }
     }
 }

@@ -12,9 +12,20 @@ namespace adatkotes
 {
     public partial class FormCountryData : Form
     {
+        public CountryData CountryData;
         public FormCountryData()
         {
             InitializeComponent();
+        }
+
+        private void FormCountryData_Load(object sender, EventArgs e)
+        {
+            bindingSource1.DataSource = CountryData;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
         }
     }
 }
