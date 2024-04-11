@@ -25,7 +25,8 @@ namespace adatkotes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
+            FormSure fs = new FormSure();
+            fs.ShowDialog();
         }
     }
 }
