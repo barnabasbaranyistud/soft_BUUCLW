@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kigyos", "kigyos\kigyos.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ea7", "Ea7\Ea7.csproj", "{6BA03E25-A00B-4ADE-883F-D43C5C5E12E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adatkotes", "adatkotes\adatkotes.csproj", "{1B3A529F-932C-403A-88DF-4352EEDE7581}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "adatkotes", "adatkotes\adatkotes.csproj", "{1B3A529F-932C-403A-88DF-4352EEDE7581}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZH2_ea", "ZH2_ea\ZH2_ea.csproj", "{042C93C8-5C58-4750-AB9E-E36F0C1E378F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{1B3A529F-932C-403A-88DF-4352EEDE7581}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B3A529F-932C-403A-88DF-4352EEDE7581}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B3A529F-932C-403A-88DF-4352EEDE7581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042C93C8-5C58-4750-AB9E-E36F0C1E378F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042C93C8-5C58-4750-AB9E-E36F0C1E378F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042C93C8-5C58-4750-AB9E-E36F0C1E378F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042C93C8-5C58-4750-AB9E-E36F0C1E378F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
