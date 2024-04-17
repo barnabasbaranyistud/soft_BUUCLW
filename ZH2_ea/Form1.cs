@@ -73,7 +73,7 @@ namespace ZH2_ea
 
             if (fuf.ShowDialog() == DialogResult.OK)
             {
-
+                futókBindingSource.Add(fuf.Újfutó);
             }
         }
     }
