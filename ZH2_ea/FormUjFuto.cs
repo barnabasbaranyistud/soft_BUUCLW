@@ -12,9 +12,11 @@ namespace ZH2_ea
 {
     public partial class FormUjFuto : Form
     {
+        public Futók Újfutó = new Futók();
         public FormUjFuto()
         {
             InitializeComponent();
+            futókBindingSource.DataSource = Újfutó;
         }
     }
 }

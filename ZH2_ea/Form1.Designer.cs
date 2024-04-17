@@ -40,6 +40,7 @@
             buttonMentes = new Button();
             textBox1 = new TextBox();
             button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)futókBindingSource).BeginInit();
             SuspendLayout();
@@ -138,11 +139,22 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(853, 667);
+            button2.Name = "button2";
+            button2.Size = new Size(247, 46);
+            button2.TabIndex = 5;
+            button2.Text = "Rekord hozzáadása";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1477, 913);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(buttonMentes);
@@ -169,5 +181,6 @@
         private BindingSource futókBindingSource;
         private TextBox textBox1;
         private Button button1;
+        private Button button2;
     }
 }

@@ -61,9 +61,19 @@ namespace ZH2_ea
         {
             if (futókBindingSource.Current == null) return;
 
-            if (MessageBox.Show("A","B",MessageBoxButtons.YesNo)== DialogResult.Yes)
+            if (MessageBox.Show("A", "B", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 futókBindingSource.RemoveCurrent();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormUjFuto fuf = new FormUjFuto();
+
+            if (fuf.ShowDialog() == DialogResult.OK)
+            {
+
             }
         }
     }
