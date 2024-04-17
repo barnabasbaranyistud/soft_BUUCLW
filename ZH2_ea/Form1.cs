@@ -76,5 +76,42 @@ namespace ZH2_ea
                 futókBindingSource.Add(fuf.Újfutó);
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            double összeg = 0;
+            int darab = 0;
+
+            foreach (var item in futók)
+            {
+                if (item.Nemzetiseg == "USA")
+                {
+                    összeg += item.EredmenyPerc;
+                    darab++;
+                }
+
+            }
+
+            //double átlag = összeg / futók.Count();
+            double átlag = összeg / darab;
+
+            MessageBox.Show(átlag.ToString());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            double minimum = double.PositiveInfinity;
+            string leggyorsabb = string.Empty;
+
+            foreach (var item in futók)
+            {
+                if (item.EredmenyPerc < minimum)
+                {
+                    minimum = item.EredmenyPerc;
+                    leggyorsabb = item.Nev;
+                }
+            }
+            MessageBox.Show($"A leggyorsabb futó {leggyorsabb}, aki {minimum} alatt futotta le a távot.");
+        }
     }
 }
